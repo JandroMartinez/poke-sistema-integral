@@ -1,0 +1,18 @@
+services:
+# 1. Definimos el servicio de nuestra API en C#
+  poke-backend:
+    build:
+      context: ./backend
+    ports:
+      - "5225:8080" # El puerto exterior : El puerto interior del contenedor
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+
+# 2. Definimos el servicio de nuestra Web en React
+  poke-frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:80" # Nuestro puerto en el navegador : El puerto de Nginx interno
+    depends_on:
+      - poke-backend # Espera a que el backend arranque primero

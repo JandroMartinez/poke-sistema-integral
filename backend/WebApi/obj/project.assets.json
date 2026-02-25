@@ -3002,11 +3002,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jandro/Projects/PokePostDB/WebApi/WebApi.csproj",
+      "projectUniqueName": "/Users/jandro/Projects/PokeProyect/backend/WebApi/WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "/Users/jandro/Projects/PokePostDB/WebApi/WebApi.csproj",
+      "projectPath": "/Users/jandro/Projects/PokeProyect/backend/WebApi/WebApi.csproj",
       "packagesPath": "/Users/jandro/.nuget/packages/",
-      "outputPath": "/Users/jandro/Projects/PokePostDB/WebApi/obj/",
+      "outputPath": "/Users/jandro/Projects/PokeProyect/backend/WebApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jandro/.nuget/NuGet/NuGet.Config"

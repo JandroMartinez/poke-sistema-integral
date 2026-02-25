@@ -33,4 +33,23 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
+
+// --- AÑADIR ESTO ANTES DE app.Run() ---
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<WebApi.Data.AppDbContext>();
+        // Esto crea la base de datos si no existe y aplica todas las migraciones
+        context.Database.Migrate(); 
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Ocurrió un error al migrar o inicializar la base de datos.");
+    }
+}
+// --------------------------------------
+
 app.Run();

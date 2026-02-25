@@ -5,7 +5,7 @@ export interface PokemonDTO {
     nombre: string;
     tipo?: string;
     nivel?: number;
-    fechaCaptura?: string; // En C# es DateTime
+    fechaCaptura?: string; 
 }
 
 export interface PokemonRAW {
@@ -28,7 +28,8 @@ export interface PaginationDTO {
     pagina: number;
 }
 
-export interface RequestListDTO<T> {
+// ARREGLADO: Ya no es genérico y coincide 100% con C#
+export interface RequestListDTO {
     filters?: FilterDTO[];
     pagination?: PaginationDTO;
 }
