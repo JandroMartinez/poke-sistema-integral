@@ -1,0 +1,8 @@
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Backend
+backend/bin/
+backend/obj/
+*.db # No subir bases de datos SQLite locales
